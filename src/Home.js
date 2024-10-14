@@ -2,34 +2,41 @@ import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
 const Home = () => {
 
-    const [blogs, stateBlog] = useState([
-        { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
-        { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
-        { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
-    ]);
+    const [blogs, setBlog] = useState(null);
+    const [isPending, setIsPanding] = useState(true);
 
-    const [name, setName] = useState('Mario');
-    
-    const handleDelete = (id) => {
-        const newBlog = blogs.filter(g => g.id !== id)
-        stateBlog(newBlog)
-    }
+    // useEffect(() =>{
+    //     fetch('http://localhost:8000/blogs')
+    //     .then(res => {
+    //         return res.json();
+    //     })
+    //     .then((data) => {
+    //         // console.log(data);
+    //         setBlog(data);
+    //         setIsPanding(false);
+    //     })
+    // }, []);
 
+    // just puase exsample
     useEffect(() =>{
-        console.log('useEffect run')
-        console.log(name)
-    }, [name]);
+        setTimeout(() => {
+                 fetch('http://localhost:8000/blogs')
+        .then(res => {
+            return res.json();
+        })
+        .then((data) => {
+            // console.log(data);
+            setBlog(data);
+            setIsPanding(false);
+        });
+    }, 1000)   
+    }, []);
 
     return (
         <div className="home">
-
-            <BlogList blg={blogs} ttl="All Blogs" handleDelete={handleDelete}/>
-
-            <button onClick={()=> setName('luigy')}>Change name</button>
-            <p>{name}</p>
-
-            <BlogList blg={blogs.filter((g) => g.author === "mario")} ttl="Mario's blogs" />
-
+            {isPending && <div>Loading ...</div>}
+            {blogs && <BlogList blogs={blogs} title="All Blogs"/>}
+            
         </div>
     );
 }

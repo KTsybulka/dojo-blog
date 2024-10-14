@@ -1,18 +1,15 @@
-{
-    "products": [
+
+  {
+    "blogs": [
       {
-        "product_id": "1",
-        "product_name": "Laptop",
-        "category": "Electronics",
-        "price": 999.99,
-        "stock": 50
-      }, 
+        "id": "1",
+        "title": "Laptop",
+        "author": "asefsdfasfn"
+      },
       {
-        "product_id": "5",
-        "product_name": "Office Chair",
-        "category": "Furniture",
-        "price": 129.99,
-        "stock": 20
+        "id": "5",
+        "title": "Office Chair",
+        "author": "sfdgsfsfd"
       }
     ]
   }

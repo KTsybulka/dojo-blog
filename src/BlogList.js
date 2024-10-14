@@ -1,21 +1,12 @@
-
-
-const BlogList = ({ blg, ttl, handleDelete}) => {
-    // const blogs = props.blg;
-    // const title = props.ttl;
-
-
+const BlogList = ({ blogs, title }) => {
     return (
         <div className="blog-list">
-
-            <h1>{ttl}</h1>
-
-            {blg.map((blog) => (
+            <h2>{title}</h2>
+            {blogs.map((blog) => (
                 <div className="blog-preview" key={blog.id}>
                     <p>Id: {blog.id}</p>
                     <h2>{blog.title}</h2>
-                    <p>Writen by:  {blog.author}</p>
-                    <button onClick={() => handleDelete(blog.id)}>Delete blog</button>
+                    <p>Written by: {blog.author}</p>
                 </div>
             ))}
         </div>
