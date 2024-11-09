@@ -2,30 +2,31 @@
 
 import Navbar from './Navbar';
 import Home from './Home';
-import Toolbar from './components/Toolbar';
-import MyForm from './components/MyForm';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Toolbar from './components/Toolbar'; // If you plan to use it, otherwise remove
+import MyForm from './components/MyForm'; // If you plan to use it, otherwise remove
+import Create from './Create';
+import Some from './Some';
 
 function App() {
-const name = "Kirill";
-const age = 37;
+  const name = "Kirill"; // Consider using these or removing them if unnecessary
+  const age = 37; 
   const link = "https://www.linkedin.com/jobs/view/4024018455/?refId=ByteString(length%3D16%2Cbytes%3D4b7d5002...3d69515f)&trackingId=c3%2BB1PJJWNeOCswwTa%2BTzg%3D%3D";
+
   return (
-    <div className="App">
-      <Navbar />
-      <div className="content">
-        <Home />
-        {/* <h2>{name}</h2>
-        <p>My age is {age}</p>
-        <p>{Math.random() * 10}</p>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path='/create' element={<Create/>} />
+            <Route path='/some' element={<Some/>}/>
+          </Routes>
 
-        <a href={link}>Go LinkedIn</a>
-
-        <Toolbar />
-
-        <MyForm /> */}
+        </div>
       </div>
-
-    </div>
+    </Router>
   );
 }
 
