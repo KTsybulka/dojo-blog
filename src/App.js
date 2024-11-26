@@ -7,6 +7,7 @@ import Toolbar from './components/Toolbar'; // If you plan to use it, otherwise 
 import MyForm from './components/MyForm'; // If you plan to use it, otherwise remove
 import Create from './Create';
 import Some from './Some';
+import BlogDetails from './components/BlogDetails';
 
 function App() {
   const name = "Kirill"; // Consider using these or removing them if unnecessary
@@ -22,6 +23,7 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path='/create' element={<Create/>} />
             <Route path='/some' element={<Some/>}/>
+            <Route path='/blogs/:id' element={<BlogDetails/>}></Route>
           </Routes>
 
         </div>

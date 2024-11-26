@@ -1,15 +1,22 @@
-
-  {
-    "blogs": [
-      {
-        "id": "1",
-        "title": "Laptop",
-        "author": "asefsdfasfn"
-      },
-      {
-        "id": "5",
-        "title": "Office Chair",
-        "author": "sfdgsfsfd"
-      }
-    ]
-  }
+{
+  "blogs": [
+    {
+      "id": "1",
+      "title": "The Best Laptops for 2024",
+      "author": "John Doe",
+      "body": "Looking for a laptop in 2024? Here's a guide to the best laptops for productivity, gaming, and everyday use."
+    },
+    {
+      "id": "5",
+      "title": "Choosing the Right Office Chair",
+      "author": "Jane Smith",
+      "body": "Your office chair impacts your posture and productivity. Learn how to pick the perfect chair for your needs."
+    },
+    {
+      "id": "8",
+      "title": "The Future of Remote Work",
+      "author": "Emma Brown",
+      "body": "Remote work is here to stay. Discover the tools and strategies that are shaping the future of work-from-home setups."
+    }
+  ]
+}
