@@ -1,12 +1,6 @@
 {
   "blogs": [
     {
-      "id": "1",
-      "title": "The Best Laptops for 2024",
-      "author": "John Doe",
-      "body": "Looking for a laptop in 2024? Here's a guide to the best laptops for productivity, gaming, and everyday use."
-    },
-    {
       "id": "5",
       "title": "Choosing the Right Office Chair",
       "author": "Jane Smith",
@@ -22,18 +16,6 @@
       "id": "1497",
       "title": "From caupus",
       "body": "URURUURUURURURURUR",
-      "author": "mario"
-    },
-    {
-      "id": "e6ec",
-      "title": "ffffffffffffffffff",
-      "body": "fffffffffffffffffffffffff",
-      "author": "mario"
-    },
-    {
-      "id": "cd5f",
-      "title": "sartawr",
-      "body": "wrtwqteqw",
       "author": "mario"
     },
     {
