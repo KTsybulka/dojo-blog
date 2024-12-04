@@ -8,6 +8,7 @@ import MyForm from './components/MyForm'; // If you plan to use it, otherwise re
 import Create from './Create';
 import Some from './Some';
 import BlogDetails from './components/BlogDetails';
+import NotFound from './components/NotFound';
 
 function App() {
   const name = "Kirill"; // Consider using these or removing them if unnecessary
@@ -24,6 +25,7 @@ function App() {
             <Route path='/create' element={<Create/>} />
             <Route path='/some' element={<Some/>}/>
             <Route path='/blogs/:id' element={<BlogDetails/>}></Route>
+            <Route path='*' element={<NotFound/>}></Route>
           </Routes>
 
         </div>
